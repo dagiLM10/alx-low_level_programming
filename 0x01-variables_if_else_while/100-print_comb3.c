@@ -1,8 +1,18 @@
 #include <stdio.h>
-#include <stlib.h>
-/***
+/**
  * main - main block
- * Return: 0 (Success)
+ * Description: Write a program that prints all possible
+ * different combinations of two digits
+ * numbers must be separated by ,, followed by a space
+ * The two digits must be different
+ * 01 and 10 are considered the same combination of the two digits 0 and 1
+ * Prints only the smallest combination of two digits
+ * Numbers should be printed in ascending order, with two digits
+ * you can only use the putchar function
+ * (every other function (printf,puts,etc_) is forbidden)
+ * You can only use putchar five times maximum in your code
+ * All your code should be in the main function
+ * Return: 0
  */
 
 int main(void)
@@ -17,18 +27,17 @@ int main(void)
 		{
 			if (d != c && d < c)
 			{
-				putchar{'0' + d);
 				putchar('0' + c);
 
 			if (c + d != 17)
 			{
-			putchar('-');
+			putchar(',');
 		putchar(' ');
 			}
 				}
 			c++;
 			}
-		c++;
+		d++;
 		}
 	putchar('\n');
 return (0);
