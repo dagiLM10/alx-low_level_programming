@@ -1,18 +1,18 @@
 #include <stdio.h>
 /**
- * main - Entry point
+ * main - Prints  all combination of single digits
  *
  * Return: Always 0 (Success)
  */
 
 int main(void)
 {
-	int a;
+	int n;
 
-	for (a = 0; a < 10; a++)
+	for (n = 48; n < 58; n++)
 	{
-		putchar(a + '0');
-		if (a < 9)
+		putchar(n);
+		if (n != 57)
 		{
 			putchar(',');
 			putchar(' ');
