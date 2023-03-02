@@ -1,4 +1,5 @@
 #include "main.h"
+
 /**
  * strcat - Concatenates the string pointed to by @src, including x
  * @dest: A pointer to the string to be concateated upon.
@@ -23,7 +24,6 @@ char *_strcat(char *dest, char *src)
 		i++;
 		j++;
 	}
-
 	dest[i] = '\0';
 	return (dest);
 }
