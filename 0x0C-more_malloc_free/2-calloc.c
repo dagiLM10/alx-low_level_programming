@@ -1,5 +1,5 @@
 #include "main.h"
-
+#include <stdlib.h>
 /**
  * _calloc - allocated memoria for nmeb elemn de zise bytes
  * @nmeb: number of element in the array
@@ -9,19 +9,21 @@
 
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-char *p;
-unsigned int i;
+	void *p;
+	unsigned int i;
 
-if (nmemb == 0 || size == 0)
-return (NULL);
+	if (nmemb == 0 || size == 0)
+		return (NULL);
+	p = malloc(nmemb * size);
+	if (p == NULL)
+	{
+		return (NULL);
+	}
 
-p = malloc(nmemb * size);
-if (p == NULL)
-return (NULL);
+	for (i = 0; i < (nmemb * size); i++)
+	{
+		*((char *)(p) + i) = 0;
+	}
 
-for (i = 0; i < nmemb * size; i++)
-p[i] = 0;
-
-return (p);
-
+	return (p);
 }
