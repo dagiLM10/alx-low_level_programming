@@ -8,7 +8,9 @@
  * Return: Always 0 (Success)
  */
 int main(int argc, char *argv[])
+
 {
+	
 	int arg1, arg2, result;
 	char o;
 	int (*func)(int, int);
@@ -30,7 +32,7 @@ int main(int argc, char *argv[])
 		exit(99);
 	}
 
-	0 = *argv[2];
+	o = *argv[2];
 
 	if ((o == '/' || 0 == '%') && arg2 == 0)
 	{
