@@ -6,7 +6,7 @@
  * Return: If big-endian - 0.
  */
 
-int get_endianness(void)
+int get_endianness(void);
 {
 	unsigned int x;
 	char *c;
