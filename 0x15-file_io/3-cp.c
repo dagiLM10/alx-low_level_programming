@@ -1,6 +1,6 @@
 #include "main.h"
 #include <stdio.h>
-#include <stdilib.h>
+#include <stdlib.h>
 
 char *create_buffer(char *file);
 void close_file(int fd);
@@ -76,7 +76,7 @@ int main(int argc, char *argv[])
 	do {
 		if (from == -1 || r == -1)
 		{
-			dprint(STDERR_FILENO,
+			dprintf(STDERR_FILENO,
 					"Error: Can't read from file %s\n", argv[1]);
 			free(buffer);
 			exit(98);
@@ -85,7 +85,7 @@ int main(int argc, char *argv[])
 		w = write(to, buffer, r);
 		if (to == -1 || w == -1)
 		{
-			dprint(STDERR_FILENO,
+			dprintf(STDERR_FILENO,
 					"Error: Can't write to %s\n", argv[2]);
 			free(buffer);
 			exit(99);
@@ -94,8 +94,7 @@ int main(int argc, char *argv[])
 		r = read(from, buffer, 1024);
 		to = open(argv[2], O_WRONLY | O_APPEND);
 
-	} 
-	while (r > 0);
+	} while (r > 0);
 
 	free(buffer);
 	close_file(from);
