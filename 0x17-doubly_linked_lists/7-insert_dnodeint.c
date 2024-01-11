@@ -3,7 +3,7 @@
 /**
  * insert_dnode_at_index - insert a new node at
  * a given position
- *
+ * Description: description of a insert dnodeint
  * @h: head of the list
  * @idx: index of the new node
  * @n: value of the new node
