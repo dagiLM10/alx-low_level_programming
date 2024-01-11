@@ -1,19 +1,19 @@
 #ifndef _LISTS_
-#define _Lists_
+#define _LISTS_
 
 #include <stdio.h>
 #include <stdlib.h>
 
 /**
-*struct dlistint_s - doubly linked list
-*@n: integer
-*@prev: points to the previous node
-*@next: points to the next node
-*
-*Description: doubly linked list node structure
-*for Holberton project
-*/
-typedef struct dlistint_d
+ * struct dlistint_s - doubly linked list
+ * @n: integer
+ * @prev: points to the previous node
+ * @next: points to the next node
+ *
+ * Description: doubly linked list node structure
+ * for Holberton project
+ */
+typedef struct dlistint_s
 {
 	int n;
 	struct dlistint_s *prev;
