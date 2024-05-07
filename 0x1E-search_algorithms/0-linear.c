@@ -10,7 +10,7 @@
  * Return: If the value if not present or the array is NULL, -1.
  *	else, the first index where the value is located.
  *
- *Description: Prints a value every time it is compared in the array
+ * Description: Prints a value every time it is compared in the array
  */
 int linear_search(int *array, size_t size, int value)
 {
